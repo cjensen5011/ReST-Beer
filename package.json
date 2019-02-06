@@ -1,0 +1,22 @@
+{
+  "name": "rest-beer",
+  "version": "1.0.0",
+  "description": "ReST Workshop with Matt Huberty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjensen5011/ReST-Beer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjensen5011/ReST-Beer/issues"
+  },
+  "homepage": "https://github.com/cjensen5011/ReST-Beer#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
