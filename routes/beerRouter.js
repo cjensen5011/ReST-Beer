@@ -1,6 +1,7 @@
 const express = require("express");
-const beerRouter = express.Router();
 const Beer = require("../models/beer");
+
+const beerRouter = express.Router();
 
 beerRouter.get("/:beer_id", (req, res) => {
   Beer.findById(req.params.beer_id, (err, beer) => {
