@@ -10,8 +10,8 @@ breweryRouter.get('/:brew_id', (req, res) => {
     } else {
       res.json(brew);
     }
-  })
-})
+  });
+});
 
 breweryRouter.put('/:brew_id', (req, res) => {
   Brewery.findById(req.params.brew_id, (err, brew) => {
@@ -27,9 +27,9 @@ breweryRouter.put('/:brew_id', (req, res) => {
         res.status(400).send(err);
       }
       res.status(200).json(`Brewery posted!\n${document}`);
-    })
-  })
-})
+    });
+  });
+});
 
 breweryRouter.delete('/:brew_id', (req, res) => {
   Brewery.deleteOne(
@@ -42,8 +42,8 @@ breweryRouter.delete('/:brew_id', (req, res) => {
       }
       res.send('You successfully deleted brewery: ' + req.params.brew_id);
     }
-  )
-})
+  );
+});
 
 breweryRouter.get('/', (req, res) => {
   Brewery.find((err, brews) => {
@@ -52,8 +52,8 @@ breweryRouter.get('/', (req, res) => {
     } else {
       res.json(brews);
     }
-  })
-})
+  });
+});
 
 breweryRouter.post('/', (req, res) => {
   let brew = new Brewery();
@@ -65,8 +65,8 @@ breweryRouter.post('/', (req, res) => {
     } else {
       res.status(200).send(`Saved your ${document}.`);
     }
-  })
-})
+  });
+});
 
 breweryRouter.use('/', (req, res) => {
   res.send('Breweries are out there...');
